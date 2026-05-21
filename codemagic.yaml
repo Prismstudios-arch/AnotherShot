@@ -5,7 +5,7 @@ workflows:
     max_build_duration: 60
     environment:
       groups:
-        - expo          # ← this line is the fix
+        - expo
       vars:
         EAS_BUILD_PROFILE: production
       node: 18
@@ -15,7 +15,7 @@ workflows:
           npm ci
       - name: Build and submit to TestFlight
         script: |
-          npm install -g eas-cli
+          npm install -g eas-cli@latest     # ← this is the important fix
           eas build --platform ios --profile production --non-interactive --auto-submit
     artifacts:
       - build/ios/*.ipa
