@@ -15,7 +15,7 @@ workflows:
           npm ci
       - name: Build and submit to TestFlight
         script: |
-          npm install -g eas-cli@latest     # ← this is the important fix
+          npm install -g eas-cli          # ← fixed (no @latest or broken version)
           eas build --platform ios --profile production --non-interactive --auto-submit
     artifacts:
       - build/ios/*.ipa
