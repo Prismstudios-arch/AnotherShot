@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0b5a5546-bd0a-4e0c-895e-2f0650b27252"
+      }
+    },
+    "owner": "allersafe"
   }
 }
